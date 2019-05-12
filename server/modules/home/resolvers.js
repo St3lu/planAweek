@@ -5,6 +5,13 @@ const resolver = {
     getAllUsers: async () => {
       const users = await User.find({});
       return users;
+    },
+    me: async (_, __, { req }) => {
+      if (!req.userId) {
+        return null;
+      }
+
+      return User.findById(req.userId);
     }
   }
 };

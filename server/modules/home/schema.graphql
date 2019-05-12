@@ -8,3 +8,7 @@ type User {
 type Query {
   getAllUsers: [User]
 }
+
+type Query {
+  me: User
+}

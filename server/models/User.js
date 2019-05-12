@@ -17,6 +17,11 @@ const userSchema = new mongoose.Schema({
     type: String,
     minlength: 3,
     maxlength: 100
+  },
+  count: {
+    required: true,
+    type: Number,
+    default: 0
   }
 });
 

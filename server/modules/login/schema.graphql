@@ -1,9 +1,10 @@
 type Query {
-  hello(name: String!): String
+  hello: String
 }
 
 type Mutation {
   login(email: String!, password: String!): LoginResponse
+  invalidateTokens: Boolean!
 }
 
 type LoginResponse {
