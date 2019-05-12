@@ -1,0 +1,12 @@
+type Query {
+  hello(name: String!): String
+}
+
+type Mutation {
+  login(email: String!, password: String!): LoginResponse
+}
+
+type LoginResponse {
+  ok: Boolean!
+  error: String
+}
