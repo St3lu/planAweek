@@ -1,4 +1,5 @@
 import { User, validate } from "../../models/User";
+import { Meal } from "../../models/Meal";
 import bcrypt from "bcrypt";
 
 const resolver = {
@@ -26,7 +27,15 @@ const resolver = {
             error: "Email already in use"
           };
         }
-
+        const meal = new Meal({
+          userId: user._id,
+          meal: [
+            {
+              week: 1
+            }
+          ]
+        });
+        await meal.save();
         await user.save();
 
         return {

@@ -1,0 +1,14 @@
+type Query {
+  getMeals(id: ID): [Meals]
+}
+
+type Meals {
+  week: String
+  Monday: [String]
+  Tuesday: [String]
+  Wednesday: [String]
+  Thursday: [String]
+  Friday: [String]
+  Saturday: [String]
+  Sunday: [String]
+}

@@ -29,7 +29,7 @@ class RegisterController extends React.Component {
   render() {
     return (
       <div>
-        {this.state.redirect ? <Redirect to="/home" /> : null}
+        {this.state.redirect ? <Redirect to="/login" /> : null}
         <RegisterView
           error={this.state.error}
           getValues={v => this.getValues(v)}

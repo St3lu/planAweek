@@ -3,3 +3,12 @@
 .App {
   text-align: center;
 }
+
+.ant-card-head {
+  background-color: #5588a3;
+}
+
+.ant-card {
+  height: 300px;
+  margin-top: 50px;
+}
